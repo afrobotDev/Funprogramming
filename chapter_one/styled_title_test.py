@@ -1,4 +1,4 @@
-from main import *
+from styled_title import *
 
 run_cases = [
     (
@@ -53,4 +53,23 @@ def main():
         correct = test(*test_case)
         if correct:
             passed += 1
-        else
+        else:
+            failed += 1
+    if failed == 0:
+        print("============= PASS ==============")
+    else:
+        print("============= FAIL ==============")
+    if skipped > 0:
+        print(f"{passed} passed, {failed} failed, {skipped} skipped")
+    else:
+        print(f"{passed} passed, {failed} failed")
+
+
+test_cases = submit_cases
+if "__RUN__" in globals():
+    test_cases = run_cases
+
+main()
+
+
+
